@@ -4,7 +4,7 @@ import { selectCurrentAdmin } from "../../Redux/Auth/selectors";
 import { useNavigate } from "react-router";
 import { FILE_BASE_URL } from "../../config/serverApiconfig";
 import { Avatar, Dropdown, Layout } from "antd";
-import { LogoutOutlined, ToolOutlined, UserOutlined } from "@ant-design/icons";
+import { HomeOutlined, LogoutOutlined, MenuOutlined, ToolOutlined, UserOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
 function HeaderContent() {
@@ -51,18 +51,34 @@ function HeaderContent() {
       type: "divider",
     },
     {
-      icon: <UserOutlined style={{ color: "#eaeaea" }}/>,
-      key: "settingProfile",
+      icon: <HomeOutlined style={{ color: "#eaeaea" }} />,
+      key: "logout",
       label: (
         <Link
-          to={"/profile"}
+          to={"/"}
           style={{
             fontFamily: "Orbitron, sans-serif",
             fontWeight: 700,
             color: "#eaeaea",
           }}
         >
-          Profile Settings
+          Home
+        </Link>
+      ),
+    },
+    {
+      icon: <UserOutlined style={{ color: "#eaeaea" }}/>,
+      key: "settingProfile",
+      label: (
+        <Link
+          to={"/userdashboard"}
+          style={{
+            fontFamily: "Orbitron, sans-serif",
+            fontWeight: 700,
+            color: "#eaeaea",
+          }}
+        >
+          User Dashboard
         </Link>
       ),
     },
@@ -71,14 +87,30 @@ function HeaderContent() {
       key: "settingApp",
       label: (
         <Link
-          to={"/settings"}
+          to={"/adminpanel"}
           style={{
             fontFamily: "Orbitron, sans-serif",
             fontWeight: 700,
             color: "#eaeaea",
           }}
         >
-          Settings
+          Admin Panel
+        </Link>
+      ),
+    },
+    {
+      icon: <MenuOutlined  style={{ color: "#eaeaea" }}/>,
+      key: "settingApp",
+      label: (
+        <Link
+          to={"/itemlisting"}
+          style={{
+            fontFamily: "Orbitron, sans-serif",
+            fontWeight: 700,
+            color: "#eaeaea",
+          }}
+        >
+          Items Listing
         </Link>
       ),
     },

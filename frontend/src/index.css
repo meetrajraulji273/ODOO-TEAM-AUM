@@ -19,7 +19,7 @@
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: #6b03fc;
+  /* background-color: #6b03fc; */
   color: var(--text-color);
 }
 
@@ -865,3 +865,47 @@ body {
   position: relative;
   z-index: 1;
 }
+
+/* Background slider setup */
+.slider-bg {
+  position: fixed; /* Fixed to stay in background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Lower z-index to be behind everything */
+  overflow: hidden;
+}
+
+.slider-bg .slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  animation: sliderAnimation 25s infinite;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Example keyframes (you can adjust timing/images) */
+@keyframes sliderAnimation {
+  0% { opacity: 1; }
+  20% { opacity: 0; }
+  40% { opacity: 1; }
+  60% { opacity: 0; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Container holding login/register content */
+.register-container {
+  position: relative;
+  z-index: 10; /* Higher z-index to appear above the slider */
+}
+
+/* Optional: Style for .register-card if needed */
+.register-card {
+  position: relative;
+  z-index: 11; /* One layer above container, if needed */
+}
+
