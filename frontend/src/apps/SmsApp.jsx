@@ -17,7 +17,6 @@ function SmsApp() {
 
   return (
     <Layout hasSider style={{ flexDirection: "row" }}>
-      <Navigation />
       {isMobile ? (
         <Layout style={{ marginLeft: 0 }}>
           <HeaderContent/>
