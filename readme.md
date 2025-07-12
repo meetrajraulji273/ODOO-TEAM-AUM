@@ -1,3 +1,9 @@
+Github Repo Link :- https://github.com/meetrajraulji273/ODOO-TEAM-AUM
+
+Youtube Video Link :- https://youtu.be/fZa13JMgmUQ
+
+---
+
 # ReWear ♻️
 
 **ReWear** is a web-based platform designed to encourage sustainable fashion by allowing users to exchange unused clothing through direct swaps or a point-based redemption system. Our goal is to significantly reduce textile waste and promote the reuse of wearable garments that might otherwise be discarded.
